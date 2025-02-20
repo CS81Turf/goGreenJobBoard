@@ -1,0 +1,227 @@
+    /* Basic Reset and Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    .header {
+      background: radial-gradient(circle, #087908, #000201);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      height: 75px;
+      /* Adjust the height to make the image smaller */
+    }
+
+    .forecast-row {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #e0e0e0;
+    }
+
+    .clock {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .weather {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 280px;
+      margin: 10px;
+      padding: 20px;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    #field-notes {
+      background: linear-gradient(to bottom, #e0f7ff, #b3e5fc);
+      /* Light blue gradient */
+    }
+
+    #shop-notes {
+      background: linear-gradient(to bottom, #ffe0b2, #ffcc80);
+      /* Light orange gradient */
+    }
+
+    #upcoming {
+      background: linear-gradient(to bottom, #fff9c4, #fff176);
+      /* Light yellow gradient */
+    }
+
+    h2 {
+      border-bottom: 2px solid #004d00;
+      padding-bottom: 5px;
+      color: #004d00;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Ticker styles */
+    .ticker {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: red;
+      color: #fff;
+      font-size: 1.5em;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    #forecast {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .forecast-title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .forecast-boxes {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .forecast-box {
+      background-color: #f0f8ff;
+      /* Soft blue background */
+      border-radius: 10px;
+      padding: 15px;
+      width: 180px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      /* Slight shadow */
+      text-align: center;
+      transition: all 0.3s ease;
+      /* Smooth transition for hover effect */
+    }
+
+    .forecast-box:hover {
+      transform: scale(1.05);
+      /* Slight zoom effect when hovered */
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      /* Enhance the shadow */
+    }
+
+    .forecast-box h4 {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .forecast-box p {
+      font-size: 1em;
+      ;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .forecast h3 {
+      text-align: center;
+      width: 100%;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .forecast-box p:first-child {
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .forecast-box p:last-child {
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    .forecast-box .high-temp {
+      color: #ff6347;
+      /* Tomato red for high temp */
+      font-weight: bold;
+    }
+
+    .forecast-box .low-temp {
+      color: #1e90ff;
+      /* Dodger blue for low temp */
+      font-weight: bold;
+    }
+
+    /* Icon color differentiation */
+    .forecast-box .sunny {
+      background-color: #ffeb3b;
+    }
+
+    .forecast-box .cloudy {
+      background-color: #525455;
+    }
+
+    .forecast-box .rainy {
+      background-color: #03a9f4;
+    }
+
+    .forecast-box .snowy {
+      background-color: #bbdefb;
+    }
+
+    .forecast-box .thunderstorm {
+      background-color: #e91e63;
+      color: white;
+    }
