@@ -20,7 +20,7 @@ updateClock(); // Initial call
 
 // ================== WEATHER FETCHING ==================
 const WEATHER_FETCH_INTERVAL = 15 * 60 * 1000; // 15 minutes
-const WEATHER_API_KEY = 'vQS2gWFflMrZmcYh43g8nKiNaxWFgEaj';
+const WEATHER_API_KEY = CONFIG.WEATHER_API_KEY;
 const lat = 38.2527;
 const lon = -85.7585;
 const WEATHER_API_URL = `https://api.tomorrow.io/v4/timelines?location=${lat},${lon}&fields=temperatureMax,temperatureMin,weatherCode,windSpeed&units=imperial&timesteps=1d&apikey=${WEATHER_API_KEY}`;
@@ -89,7 +89,7 @@ document.addEventListener("visibilitychange", () => {
 
 // ================== GOOGLE SHEETS FETCHING ==================
 const SHEET_ID = '1XFYRaB50QGaE8MJ-xUVrvvZDnqVu-QpZCvty0o-cjK4'; // Extracted from URL
-const SHEETS_API_KEY = 'AIzaSyAynUNK5VzaeJjIpjUBWtgremT9lAaYLNo'; // Separate from weather API key
+const SHEETS_API_KEY = CONFIG.SHEETS_API_KEY; // Separate from weather API key
 const RANGE = 'Sheet1!A1:C100';
 const SHEET_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${SHEETS_API_KEY}`;
 

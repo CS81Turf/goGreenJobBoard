@@ -1,0 +1,4 @@
+const CONFIG = {
+    WEATHER_API_KEY: 'vQS2gWFflMrZmcYh43g8nKiNaxWFgEaj',
+    SHEETS_API_KEY: 'AIzaSyASJMKwC_jO3F6WD8owU0pYhKBMw0My_Uc'
+};
